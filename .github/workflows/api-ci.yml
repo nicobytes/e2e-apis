@@ -28,7 +28,7 @@ jobs:
       - name: install
         run: npm ci
       - name: run e2e
-        run: npm run e2e
+        run: npm run e2e:ci
         env:
           PORT: 3000
           DATABASE_URL: postgres://e2e:e2e123@localhost:5433/db_e2e
