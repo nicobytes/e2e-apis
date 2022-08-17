@@ -16,7 +16,6 @@ if (config.isProd) {
   }
 }
 
-console.log('dbUrl===', config.dbUrl);
 const sequelize = new Sequelize(config.dbUrl, options);
 
 setupModels(sequelize);
