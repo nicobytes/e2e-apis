@@ -5,9 +5,12 @@ const envs = {
   'e2e': '.env.e2e',
 }
 
-require('dotenv').config({
-  path: envs[env] || '.env'
-});
+const options = {};
+if (envs[env]) {
+  options.path = envs[env];
+}
+
+require('dotenv').config(options);
 
 const config = {
   env: process.env.NODE_ENV || 'dev',
