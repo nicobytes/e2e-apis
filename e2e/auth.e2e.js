@@ -67,7 +67,7 @@ describe('Testing for /auth endpoints', () => {
       expect(body.message).toEqual('mail sent');
       expect(mockSendMail).toHaveBeenCalled();
       // check DB
-      const user = await models.User.findOne({ email: inputData.email });
+      const user = await models.User.findOne({ where: { email: inputData.email } });
       expect(user.recoveryToken).toBeTruthy();
     });
 
