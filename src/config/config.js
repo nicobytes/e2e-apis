@@ -1,4 +1,13 @@
-require('dotenv').config();
+const env = process.env.NODE_ENV || 'dev';
+
+const envs = {
+  'dev': '.env',
+  'e2e': '.env.e2e',
+}
+
+require('dotenv').config({
+  path: envs[env] || '.env'
+});
 
 const config = {
   env: process.env.NODE_ENV || 'dev',

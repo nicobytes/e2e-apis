@@ -70,6 +70,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+coverage-e2e
 *.lcov
 
 # nyc test coverage
@@ -121,6 +122,7 @@ web_modules/
 # dotenv environment variables file
 .env
 .env.test
+.env.e2e
 .env.production
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -193,6 +195,7 @@ $RECYCLE.BIN/
 *.lnk
 
 postgres_data
+postgres_data_e2e
 mysql_data
 .vscode
 
